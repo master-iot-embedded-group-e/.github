@@ -12,6 +12,7 @@ the wiring, how to build and flash it, the architecture, and how it was tested.
 | Project | What it does | Highlights |
 |---|---|---|
 | [brightness_control](https://github.com/master-iot-embedded-group-e/brightness_control) | Measures ambient light with an LDR and shows the level on an RGB LED. A button switches between three operating modes. | Zephyr threads and message queues, a Mealy FSM, debounced short and long button presses, and ADC runtime power management. The same code drives both common-anode and common-cathode LEDs through devicetree overlays. |
+| [drone_telemetry](https://github.com/master-iot-embedded-group-e/drone_telemetry) *(in progress)* | Final project of the course: a tracking and telemetry node for a drone. It reports position, motion, ambient light, temperature and humidity, and classifies the drone as idle, flying or in trouble. It monitors the drone but does not control it. | GPS over UART, an MPU6050 IMU and an Si7021 sensor on a shared I2C bus, an LDR on the ADC, and an RGB status LED. Four operating modes selected with a button. In simulator mode it streams fixed-width telemetry frames at 10 Hz, with a checksum, to a flight simulator on the PC. |
 
 ## Stack
 
